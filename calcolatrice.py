@@ -30,3 +30,4 @@ def divisione(a: int | float, b: int | float) -> float:
     if b == 0:
         raise ZeroDivisionError("Impossibile dividere per zero") # Modifica: ora solleva ZeroDivisionError
     return a / b
+#codice terminato
