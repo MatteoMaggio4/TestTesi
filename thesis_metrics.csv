@@ -1,0 +1,3 @@
+Timestamp,File Analizzato,Esito LLM,Stato Test Locale,Azione Utente,Tempo AI (sec)
+2026-04-29 16:24:54,calcolatrice.py,Bug Rilevato,Fallito (Possibile Overfitting),Patch Applicata,68.84
+2026-04-29 16:25:01,calcolatrice.py,Bug Rilevato,Fallito (Possibile Overfitting),Bypass (Finestra chiusa),75.73
