@@ -1,10 +1,4 @@
-def somma(a, b):
-    return a - b # Errore logico
-#commento di prova
-def sottrazione(a, b):
-    return a + b
-
-def moltiplicazione(a, b):
-    return a/b
-def divisione(a, b):
-    return a*b
+def applica_sconto(prezzo_base, sconto):
+    # BUG LOGICO: somma invece di sottrarre
+    prezzo_finale = prezzo_base + sconto
+    return prezzo_finale
