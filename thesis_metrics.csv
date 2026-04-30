@@ -2,3 +2,9 @@ Timestamp,File Analizzato,Esito LLM,Stato Test Locale,Azione Utente,Tempo AI (se
 2026-04-29 16:24:54,calcolatrice.py,Bug Rilevato,Fallito (Possibile Overfitting),Patch Applicata,68.84
 2026-04-29 16:25:01,calcolatrice.py,Bug Rilevato,Fallito (Possibile Overfitting),Bypass (Finestra chiusa),75.73
 2026-04-29 16:29:48,sconto.py,Nessun Bug Rilevato,N/A,Push Approvato,6.34
+2026-04-29 16:31:33,sconto.py,Bug Rilevato,Fallito (Possibile Overfitting),Patch Applicata,34.32
+2026-04-29 16:31:44,sconto.py,Bug Rilevato,Fallito (Possibile Overfitting),Push Bloccato,45.81
+2026-04-29 16:32:36,sconto.py,Nessun Bug Rilevato,N/A,Push Approvato,46.73
+2026-04-30 12:39:48,TestJs.js,Errore di Sistema,N/A,Push Bloccato,245.17
+2026-04-30 12:47:03,N/A,Nessun file supportato,N/A,Bypass (Finestra chiusa),6.47
+2026-04-30 12:48:15,TestJs.js,Errore di Sistema,N/A,Bypass (Finestra chiusa),46.61
