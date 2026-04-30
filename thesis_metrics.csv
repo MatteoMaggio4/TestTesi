@@ -6,3 +6,8 @@ Timestamp,File Analizzato,Esito LLM,Stato Test Locale,Azione Utente,Tempo AI (se
 2026-04-30 15:02:31,scriptJava.java,Errore di Sistema,N/A,Push Bloccato,94.81
 2026-04-30 15:25:28,scriptJava.java,Errore di Sistema,N/A,Push Bloccato,0.0,250.26
 2026-04-30 15:27:47,scriptJava.java,Errore di Sistema,N/A,Bypass (Finestra chiusa),0.0,11.84
+2026-04-30 15:29:51,scriptJava.java,Errore di Sistema,N/A,Push Bloccato,0.0,10.83
+2026-04-30 15:33:31,scriptJava.java,Errore di Sistema,N/A,Push Bloccato,0.0,167.73
+2026-04-30 15:34:09,scriptJava.java,Bug Rilevato,Patch Applicata,Patch Applicata,8.46,18.91
+2026-04-30 15:34:59,scriptJava.java,Bug Rilevato,Patch Applicata,Patch Applicata,14.76,24.56
+2026-04-30 15:35:19,scriptJava.java,Nessun Bug Rilevato,N/A,Push Approvato,12.68,15.62
