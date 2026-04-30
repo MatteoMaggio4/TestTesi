@@ -10,4 +10,4 @@ public class TestJava1 {
         String b = new String("Mario");
         System.out.println(compareNames(a, b));
     }
-}
+}//non va
