@@ -8,3 +8,7 @@ Timestamp,File Analizzato,Esito LLM,Stato Test Locale,Azione Utente,Tempo AI (se
 2026-04-30 12:39:48,TestJs.js,Errore di Sistema,N/A,Push Bloccato,245.17
 2026-04-30 12:47:03,N/A,Nessun file supportato,N/A,Bypass (Finestra chiusa),6.47
 2026-04-30 12:48:15,TestJs.js,Errore di Sistema,N/A,Bypass (Finestra chiusa),46.61
+2026-04-30 12:53:00,TestJs.js,Errore di Sistema,N/A,Push Bloccato,55.03
+2026-04-30 12:56:00,TestJs.js,Errore di Sistema,N/A,Push Bloccato,63.1
+2026-04-30 12:59:01,TestJs.js,Errore di Sistema,N/A,Push Bloccato,157.98
+2026-04-30 13:02:05,TestJs.js,Errore di Sistema,N/A,Push Bloccato,174.4
