@@ -1,35 +1,29 @@
-# order_processor.py
-from user_manager import UserManager
-from inventory import Inventory
+# inventory.py
 
-class OrderProcessor:
+class Inventory:
     def __init__(self):
-        self.user_mgr = UserManager()
-        self.inventory = Inventory()
+        # Database in memoria simulato
+        self.products = {
+            "laptop": {"stock": 5, "price": 1000.0},
+            "mouse": {"stock": 10, "price": 25.0},
+            "keyboard": {"stock": 0, "price": 45.0} # Esaurito
+        }
 
-    def process_order(self, username, product_name):
-        """Elabora un ordine completo."""
-        
-        if not self.inventory.is_in_stock(product_name):
-            return "Fallito: Prodotto non disponibile"
-            
-        price = self.inventory.get_price(product_name)
-        
-        # Verifica se l'utente può permettersi il prodotto
-        if self.user_mgr.can_afford(username, price):
-             # Tenta di dedurre il saldo. Se fallisce, significa che il saldo non è più sufficiente.
-             if self.user_mgr.deduct_balance(username, price):
-                 self.inventory.reduce_stock(product_name)
-                 return "Successo: Ordine completato"
-             else:
-                 # Se deduct_balance fallisce dopo che can_afford era True,
-                 # il motivo più probabile è che il saldo non è più sufficiente.
-                 return "Fallito: Saldo insufficiente"
-        else:
-             # Saldo inizialmente insufficiente
-             return "Fallito: Saldo insufficiente"
+    def is_in_stock(self, product_name):
+        """Verifica se il prodotto è in magazzino."""
+        if product_name in self.products and self.products[product_name]["stock"] > 0:
+            return True
+        return False
 
-# Esempio di utilizzo (opzionale, ma aiuta a capire il flusso)
-if __name__ == "__main__":
-    processor = OrderProcessor()
-    print(processor.process_order("mario80", "mouse"))
+    def get_price(self, product_name):
+        if product_name in self.products:
+            return self.products[product_name]["price"]
+        return 0.0
+
+    def reduce_stock(self, product_name):
+        """Riduce la giacenza di un prodotto di 1 unità."""
+        if self.is_in_stock(product_name):
+         
+            self.products[product_name]["stock"] += 1 
+            return True
+        return False
