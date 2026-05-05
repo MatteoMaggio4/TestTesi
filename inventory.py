@@ -23,7 +23,7 @@ class Inventory:
     def reduce_stock(self, product_name):
         """Riduce la giacenza di un prodotto di 1 unità."""
         if self.is_in_stock(product_name):
-         
-            self.products[product_name]["stock"] += 1 
+            # BUG LOGICO 2: Corretto l'operatore da += 1 a -= 1
+            self.products[product_name]["stock"] -= 1
             return True
         return False
