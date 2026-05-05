@@ -20,7 +20,6 @@ class RoomManager:
 
     def can_book(self, room_type, num_rooms):
         """Verifica se è possibile prenotare 'num_rooms' stanze."""
-        # Controllo aggiuntivo per garantire che room_type esista prima di procedere
         if room_type not in self.rooms:
             return False
             
