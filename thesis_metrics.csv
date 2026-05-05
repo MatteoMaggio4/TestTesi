@@ -2,3 +2,6 @@ Timestamp,File Analizzato,Esito LLM,Stato Test,Passati,Falliti,Azione Utente,Tem
 2026-05-05 11:49:31,inventory.py,Processato,Fallito,0,0,Scartato,21.4,64.96
 2026-05-05 11:50:10,order_processor.py,Processato,Passato,27,0,Patch Applicata,28.87,38.04
 2026-05-05 11:50:45,user_manager.py,Processato,Passato,27,0,Patch Applicata,17.37,35.74
+2026-05-05 12:19:16,booking_system.py,Processato,Passato,5,0,Patch Applicata,11.09,24.77
+2026-05-05 12:19:51,discount_calculator.py,Processato,Fallito,6,1,Patch Applicata,13.35,34.67
+2026-05-05 12:20:15,room_manager.py,Processato,Passato,23,0,Patch Applicata,13.82,24.59
