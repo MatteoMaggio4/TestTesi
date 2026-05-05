@@ -1,0 +1,4 @@
+Timestamp,File Analizzato,Esito LLM,Stato Test,Passati,Falliti,Azione Utente,Tempo API (s),Tempo Sessione (s)
+2026-05-05 11:49:31,inventory.py,Processato,Fallito,0,0,Scartato,21.4,64.96
+2026-05-05 11:50:10,order_processor.py,Processato,Passato,27,0,Patch Applicata,28.87,38.04
+2026-05-05 11:50:45,user_manager.py,Processato,Passato,27,0,Patch Applicata,17.37,35.74
