@@ -39,4 +39,4 @@ class RoomManager:
         if self.can_book(room_type, num_rooms):
             self.rooms[room_type]["booked"] += num_rooms
             return True
-        return False
+        return False # Se non è possibile prenotare, ritorna False senza modificare lo stato.
