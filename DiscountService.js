@@ -29,12 +29,12 @@ class DiscountService {
     }
 
     applyBulkDiscount(totalAmount, itemCount) {
-        if (itemCount > 10) {
-            return totalAmount * 0.85; 
+        if (itemCount > 20) { // Controllo più restrittivo per primo
+            return totalAmount * 0.80;
+        } else if (itemCount > 10) {
+            return totalAmount * 0.85;
         } else if (itemCount > 5) {
-            return totalAmount * 0.90; 
-        } else if (itemCount > 20) {
-            return totalAmount * 0.80; 
+            return totalAmount * 0.90;
         }
         return totalAmount;
     }

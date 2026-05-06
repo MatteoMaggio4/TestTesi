@@ -26,7 +26,17 @@ class OrderProcessor {
             total = this.discountService.applyCoupon(total, couponCode);
         }
 
+        // Assicuriamoci che il total non diventi negativo a causa di sconti eccessivi prima di confrontarlo con il wallet
+        if (total < 0) {
+            total = 0;
+        }
+
         if (this.walletBalance >= total) {
+            // Assumendo che il checkout "consumi" il saldo del wallet,
+            // ma il codice fornito non implementa questa logica.
+            // Per ora, restituiamo semplicemente lo stato di successo.
+            // Se fosse necessario aggiornare this.walletBalance:
+            // this.walletBalance -= total;
             return { status: "SUCCESS", finalTotal: total, remainingBalance: this.walletBalance };
         } else {
             return { status: "FAILED", message: "Insufficient funds" };
