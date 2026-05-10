@@ -9,7 +9,8 @@ class DiscountCart {
             throw new Error("Lo sconto deve essere maggiore di zero.");
         }
 
-        if (amount > this.maxDiscount) {
+        // Verifica se l'importo dello sconto da applicare, sommato allo sconto già utilizzato, supera il massimo consentito.
+        if (this.discountUsed + amount > this.maxDiscount) {
             throw new Error("Sconto massimo superato.");
         }
 

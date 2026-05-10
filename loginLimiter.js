@@ -5,11 +5,12 @@ class LoginLimiter {
     }
 
     registerFailure() {
+        this.failedAttempts += 1; // Incrementa prima per controllare lo stato attuale
+
         if (this.failedAttempts > this.maxAttempts) {
             throw new Error("Account temporaneamente bloccato.");
         }
 
-        this.failedAttempts += 1;
         return this.failedAttempts;
     }
 
