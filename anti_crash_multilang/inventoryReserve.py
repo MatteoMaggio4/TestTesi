@@ -1,7 +1,7 @@
 class InventoryReserve:
     """
     Python inventory module.
-    It follows the same business rule described in sharedPolicy.ts:
+    It follows the same business rule described in sharedPolicy.ts: 
     the daily limit is cumulative, not a limit on a single reservation.
     """
 
@@ -17,8 +17,8 @@ class InventoryReserve:
         if units > self.available_units:
             raise ValueError("Not enough units available.")
 
-        # BUG: checks only the current request, not the cumulative daily total.
-        if units > self.daily_limit:
+        # BUG FIXED: checks the cumulative daily total, not just the current request.
+        if self.reserved_today + units > self.daily_limit:
             raise ValueError("Daily reservation limit exceeded.")
 
         self.available_units -= units

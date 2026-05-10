@@ -13,8 +13,8 @@ class RewardBudget {
             throw new Error("Points must be greater than zero.");
         }
 
-        // BUG: checks only the current assignment, not the amount already used.
-        if (points > this.maxBudget) {
+        // BUG FIXED: checks the cumulative daily total, not just the current request.
+        if (this.usedBudget + points > this.maxBudget) {
             throw new Error("Reward budget exceeded.");
         }
 
