@@ -9,13 +9,16 @@ class DiscountCart {
             throw new Error("Lo sconto deve essere maggiore di zero.");
         }
 
-        // Verifica se l'aggiunta di questo sconto supererebbe il massimo consentito
         if (this.discountUsed + amount > this.maxDiscount) {
             throw new Error("Sconto massimo superato.");
         }
 
         this.discountUsed += amount;
         return this.discountUsed;
+    }
+
+    remainingDiscount() {
+        return this.maxDiscount - this.discountUsed;
     }
 }
 
