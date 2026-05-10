@@ -9,7 +9,8 @@ class RewardBudget {
             throw new Error("I punti devono essere maggiori di zero.");
         }
 
-        if (points > this.maxBudget) {
+        // Aggiunto controllo per assicurarsi che l'assegnazione non superi il budget rimanente
+        if (this.usedBudget + points > this.maxBudget) {
             throw new Error("Budget premi superato.");
         }
 

@@ -16,7 +16,8 @@ class InventoryReserve:
         if units > self.available_units:
             raise ValueError("Unita disponibili insufficienti.")
 
-        if units > self.max_reservation:
+        # Correzione: Verifica che l'aggiunta delle nuove unità non superi il limite giornaliero totale
+        if self.reserved_today + units > self.max_reservation:
             raise ValueError("Limite giornaliero di prenotazione superato.")
 
         self.available_units -= units
