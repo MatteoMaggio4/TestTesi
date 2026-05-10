@@ -1,7 +1,2 @@
 
-2026-05-10 15:41:44,bankAccount.py,Bug o rischio segnalato,Fallito,7,0,Patch applicata,6.36,37.95
-2026-05-10 15:49:47,bankAccount.py,Bug o rischio segnalato,Fallito,11,7,Scartato,7.96,36.63
-2026-05-10 16:18:25,bankAccount.py,Test non eseguibile,Fallito,0,0,Patch applicata,22.79,34.93
-2026-05-10 16:21:42,bankAccount.py,Bug o rischio segnalato,Fallito,0,8,Patch applicata,9.08,53.11
-2026-05-10 16:35:21,bankAccount.py,Bug o rischio segnalato,Fallito,6,1,Patch applicata,5.57,39.47
-2026-05-10 18:50:13,bankAccount.py,Test non eseguibile,Fallito,0,0,Scartato,30.27,66.32
+

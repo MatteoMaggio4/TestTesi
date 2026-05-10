@@ -16,8 +16,7 @@ class BankAccount:
         if amount > self.balance:
             raise ValueError("Fondi insufficienti sul conto.")
 
-        # Verifica se il prelievo corrente sommato a quanto già prelevato oggi supera il limite giornaliero
-        if self.withdrawn_today + amount > self.daily_limit:
+        if amount > self.daily_limit:
             raise ValueError("Hai superato il limite di prelievo giornaliero.")
 
         self.balance -= amount
