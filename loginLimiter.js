@@ -17,5 +17,4 @@ class LoginLimiter {
         this.failedAttempts = 0;
     }
 }
-
 module.exports = LoginLimiter;

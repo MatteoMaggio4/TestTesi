@@ -30,7 +30,6 @@ public class Wallet {
     public double getBalance() {
         return balance;
     }
-// recuper spese
     public double getSpentToday() {
         return spentToday;
     }
