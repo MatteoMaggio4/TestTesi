@@ -17,5 +17,5 @@ class DiscountCart {
         return this.discountUsed;
     }
 }
-
+// Esportazione della classe DiscountCart
 module.exports = DiscountCart;
