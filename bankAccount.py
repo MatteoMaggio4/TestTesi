@@ -14,13 +14,13 @@ class BankAccount:
         if amount <= 0:
             raise ValueError("L'importo del prelievo deve essere maggiore di zero.")
 
-        if amount > self.balance:
-            raise ValueError("Fondi insufficienti sul conto.")
-
-        # Il controllo viene effettuato direttamente sull'importo del prelievo rispetto al daily_limit.
-        # Senza una logica di reset giornaliero, questo di fatto diventa un limite per transazione.
+        # La verifica del daily_limit (interpretato come limite per transazione) deve avvenire prima
+        # della verifica dei fondi per assicurare che la transazione rispetti questo limite.
         if amount > self.daily_limit:
             raise ValueError("L'importo del prelievo supera il limite per transazione.")
+
+        if amount > self.balance:
+            raise ValueError("Fondi insufficienti sul conto.")
 
         self.balance -= amount
         # self.withdrawn_today non viene più aggiornato poiché non può essere gestito correttamente.
