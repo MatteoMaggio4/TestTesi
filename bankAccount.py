@@ -3,6 +3,11 @@ class BankAccount:
         self.balance = initial_balance
         self.daily_limit = daily_limit
         self.withdrawn_today = 0.0
+        # È necessario anche un meccanismo per resettare withdrawn_today,
+        # ma questo va oltre il metodo withdraw e implica una gestione
+        # della giornata che non è presente in questo snippet.
+        # Per la correzione del solo metodo withdraw, ci focalizziamo
+        # sull'uso corretto del limite giornaliero.
 
     def withdraw(self, amount):
         """
@@ -16,7 +21,8 @@ class BankAccount:
         if amount > self.balance:
             raise ValueError("Fondi insufficienti sul conto.")
 
-        if amount > self.daily_limit:
+        # Correzione: verificare se l'importo del prelievo sommato a quello già prelevato supera il limite giornaliero.
+        if self.withdrawn_today + amount > self.daily_limit:
             raise ValueError("Hai superato il limite di prelievo giornaliero.")
 
         self.balance -= amount
