@@ -18,7 +18,8 @@ public class Wallet {
             throw new IllegalArgumentException("Saldo insufficiente.");
         }
 
-        if (amount > dailyLimit) {
+        // Modifica: Controlla se la somma dell'importo da pagare e di quanto già speso oggi supera il limite giornaliero
+        if (spentToday + amount > dailyLimit) {
             throw new IllegalArgumentException("Limite giornaliero superato.");
         }
 
@@ -30,6 +31,7 @@ public class Wallet {
     public double getBalance() {
         return balance;
     }
+
     public double getSpentToday() {
         return spentToday;
     }
